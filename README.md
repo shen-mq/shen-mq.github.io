@@ -1,4 +1,4 @@
-# Tufted
+# Template for the Blog System: Tufted
 
 A static website template built using Typst's experimental HTML export. Requires no external dependencies other than basic `make`.
 
