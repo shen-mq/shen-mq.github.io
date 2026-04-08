@@ -20,6 +20,11 @@ make html
 
 Explore the `content/` folder for examples.
 
+To run locally(with python):
+```shell
+python3 -m http.server 8000 --directory _site
+```
+
 ## Links
 
 - [tufted.vsheg.com](https://tufted.vsheg.com) — live demo and docs of the latest stable version
