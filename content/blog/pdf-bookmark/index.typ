@@ -39,8 +39,6 @@ Chapter 3................20
 Appendix................36
 ```
 
-=== inline command
-
 `pdf-bookmark` 支持在 `bmk` 文本中使用以 `!!!` 开头的内联命令，后续书签会持续受该命令影响，直到被新的同类命令覆盖。
 
 常用命令如下：
@@ -58,6 +56,31 @@ Appendix................36
 第1章 基本概念................1
 ```
 所以要使得这个书签对应到真实的PDF的页数上，就需要加上 14。所以换算关系为`actual = new_index + page - 1`，`actual` 是 PDF 真实的页数，`page` 是逻辑上的、写在书上的页码。
+
+在有了 bmk 格式的书签后（例如保存为 `bookmark.bmk`）,就可以用以下命令给 PDF 文件加书签了
+```bash
+pdf-bookmark -p input.pdf -b bookmark.bmk -o new.pdf
+```
+
+`pdf-bookmark` 命令的使用说明如下：
+```
+usage: pdf-bookmark [-h] [-f {bmk,none,pdftk,pdfmark,json}]
+                    [-l COLLAPSE_LEVEL] [-b BOOKMARK] [-p PDF] [-o OUTPUT_PDF]
+
+Import and export PDF bookmark
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -f {bmk,none,pdftk,pdfmark,json}, --format {bmk,none,pdftk,pdfmark,json}
+                        the output format of bookmark
+  -l COLLAPSE_LEVEL, --collapse-level COLLAPSE_LEVEL
+                        the min level to be collapsed, 0 to expand all
+  -b BOOKMARK, --bookmark BOOKMARK
+                        the bookmark file to be imported
+  -p PDF, --pdf PDF     the input PDF file
+  -o OUTPUT_PDF, --output-pdf OUTPUT_PDF
+                        the output PDF file
+```
 
 == page label 和 bookmark
 
