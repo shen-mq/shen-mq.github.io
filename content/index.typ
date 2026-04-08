@@ -4,6 +4,4 @@
 
 = Tufted
 
-*Hello, World* again.
-
-你好，世界！
+*Hello, World!*
