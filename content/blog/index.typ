@@ -6,3 +6,4 @@
 == 2026
 
 - #link("pdf-bookmark")[PDF 书签制作]
+- #link("server-network-proxy")[服务器使用网络代理]
